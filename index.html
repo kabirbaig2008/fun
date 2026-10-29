@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the crew: Hamza, Moin, Ziyan and Abdul.">
+  <title>HMZA Crew — Meet the Gang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">✦</span> HMZA <span class="brand-light">CREW</span></a>
+    <nav><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a></nav>
+    <div class="top-actions">
+      <label class="top-search"><span>⌕</span><input id="topSearch" type="search" placeholder="Search the crew…"></label>
+      <button class="login-top" id="openLogin">♙ Login</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">THE CREW • THE VIBES • JUST FOR FUN</p>
+        <h1>Meet your<br>favourite <em>characters.</em></h1>
+        <p class="hero-sub">Four personalities. Unlimited vibes.<br>Explore the crew and pick your favourite.</p>
+        <div class="hero-search"><span>⌕</span><input id="heroSearch" type="search" placeholder="Search Hamza, Moin, Ziyan or Abdul…"><button id="searchButton" aria-label="Search">→</button></div>
+        <p class="disclaimer">Fictional AI character cards — not actual people for sale.</p>
+      </div>
+      <div class="hero-tag">MEET THE GANG <span>↗</span></div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow dark">SHOP OUR FAVOURITES</p><h2>Meet the Gang<span class="dot">.</span></h2>
+        <p class="section-sub">Browse the character cards, add favourites to your cart, and have fun.</p></div>
+        <div class="cart-pill">🛒 <span id="cartCount">0</span> in cart</div>
+      </div>
+
+      <div class="cards" id="cards">
+        <article class="person-card" data-name="hamza" data-price="499">
+          <div class="portrait portrait-hamza"><img src="assets/ai-gang-banner.png" alt="AI-generated character portrait for Hamza"></div>
+          <div class="card-body"><span class="badge gold">BEST SELLER</span><h3>Hamza</h3><p class="tagline">90s hairstyle • Retro energy</p><p class="description">Classic hair, confident style, old-school cool.</p><div class="card-bottom"><strong>₹499</strong><button class="add-cart">＋ Add to cart</button></div></div>
+        </article>
+        <article class="person-card" data-name="moin" data-price="399">
+          <div class="portrait portrait-moin"><img src="assets/ai-gang-banner.png" alt="AI-generated character portrait for Moin"></div>
+          <div class="card-body"><span class="badge blue">FAN FAVOURITE</span><h3>Moin</h3><p class="tagline">Small build • Big attitude</p><p class="description">A compact character with main-character energy.</p><div class="card-bottom"><strong>₹399</strong><button class="add-cart">＋ Add to cart</button></div></div>
+        </article>
+        <article class="person-card" data-name="ziyan" data-price="449">
+          <div class="portrait portrait-ziyan"><img src="assets/ai-gang-banner.png" alt="AI-generated character portrait for Ziyan"></div>
+          <div class="card-body"><span class="badge purple">TRENDING</span><h3>Ziyan</h3><p class="tagline">Curly hair • Cool vibes</p><p class="description">Soft curls, relaxed style, effortless charm.</p><div class="card-bottom"><strong>₹449</strong><button class="add-cart">＋ Add to cart</button></div></div>
+        </article>
+        <article class="person-card" data-name="abdul" data-price="599">
+          <div class="portrait portrait-abdul"><img src="assets/ai-gang-banner.png" alt="AI-generated character portrait for Abdul"></div>
+          <div class="card-body"><span class="badge green">BIG VIBES</span><h3>Abdul</h3><p class="tagline">Big heart • Bigger energy</p><p class="description">The friendly, bold personality of the crew.</p><div class="card-bottom"><strong>₹599</strong><button class="add-cart">＋ Add to cart</button></div></div>
+        </article>
+      </div>
+      <p id="noResults" class="no-results" hidden>No crew members match that search. Try another name.</p>
+    </section>
+
+    <section class="about" id="about"><div><p class="eyebrow">ABOUT THE PROJECT</p><h2>A playful character store.</h2></div><p>This is a demo storefront for fictional AI-inspired character cards and fan-style merchandise. No real person is being sold. Replace the demo products, prices, and images with items you have permission to use.</p></section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-icon">✦</span> HMZA <span class="brand-light">CREW</span></a><p>Made for fun • Fictional character concept</p><a href="#home">Back to top ↑</a></footer>
+
+  <div class="modal-backdrop" id="loginModal" hidden>
+    <section class="login-modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button class="close-modal" id="closeLogin" aria-label="Close login">×</button>
+      <div class="brand modal-brand"><span class="brand-icon">✦</span> HMZA <span class="brand-light">CREW</span></div>
+      <h2 id="loginTitle">Welcome back.</h2><p>Sign in to save your favourites.</p>
+      <button class="google-button" id="googleLogin"><span class="google-g">G</span> Continue with Google</button>
+      <div class="divider"><span>OR</span></div>
+      <form id="loginForm"><label>Email address<input type="email" placeholder="you@example.com" required></label><label>Password<input type="password" placeholder="At least 6 characters" minlength="6" required></label><button class="primary-button" type="submit">Sign in</button></form>
+      <p class="login-note" id="loginMessage">Demo login UI. Connect Firebase Authentication to enable real sign-in.</p>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
